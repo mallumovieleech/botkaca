@@ -38,15 +38,6 @@ if CONFIG.BOT_PASSWORD:
             wrong_room_handler.func,
             filters = lambda msg: not msg.chat.id in STATUS.CHAT_ID
         )
-    )
-
-    app.add_handler(incoming_g_clear_handler)
-    #
-    incoming_youtube_dl_handler = MessageHandler(
-        incoming_youtube_dl_f,
-        filters=filters.command([YTDL_COMMAND, GYTDL_COMMAND])
-        & filters.chat(chats=AUTH_CHANNEL),
-    )
 
 if __name__ == '__main__':
     loop = asyncio.get_event_loop()
