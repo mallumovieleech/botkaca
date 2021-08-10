@@ -39,7 +39,6 @@ if CONFIG.BOT_PASSWORD:
             filters = lambda msg: not msg.chat.id in STATUS.CHAT_ID
         )
     )
-
 )
     app.add_handler(incoming_g_clear_handler)
     #
