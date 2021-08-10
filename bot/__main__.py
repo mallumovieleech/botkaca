@@ -38,6 +38,7 @@ if CONFIG.BOT_PASSWORD:
             wrong_room_handler.func,
             filters = lambda msg: not msg.chat.id in STATUS.CHAT_ID
         )
+)
 
 if __name__ == '__main__':
     loop = asyncio.get_event_loop()
